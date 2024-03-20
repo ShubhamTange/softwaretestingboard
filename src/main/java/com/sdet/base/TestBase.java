@@ -43,8 +43,9 @@ public class TestBase {
 		fis = new FileInputStream(filename);
 		props = new Properties();
 		props.load(fis);
-		
+		driver.manage().window().maximize();
 		driver.get(props.getProperty("URL"));
+		
 		
 	}
 	
