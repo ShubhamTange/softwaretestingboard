@@ -32,6 +32,7 @@ public class SignInPage extends TestBase{
 			welcomMsgDisplayed = true;
 		}
 		catch(Exception ex) {
+			
 			ex.printStackTrace();
 		}
 		
