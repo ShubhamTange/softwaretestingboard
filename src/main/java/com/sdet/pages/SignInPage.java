@@ -29,6 +29,7 @@ public class SignInPage extends TestBase{
 		boolean welcomMsgDisplayed = false;
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMsg));
+			captureScreenshots("SigninHomePage");
 			welcomMsgDisplayed = true;
 		}
 		catch(Exception ex) {
