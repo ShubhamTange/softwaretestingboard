@@ -6,7 +6,7 @@
       <class name="com.sdet.testcases.SigninTC">
         <methods>
           <include name="beforeClass"/>
-          <include name="addProductCart"/>
+          <include name="signInTC" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.sdet.testcases.SigninTC -->
     </classes>

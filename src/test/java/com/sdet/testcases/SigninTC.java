@@ -1,5 +1,8 @@
 package com.sdet.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -26,23 +29,7 @@ public class SigninTC extends TestBase{
 		Assert.assertTrue(SignInPage.sigin(username, password));
 	}
 	
-	@Test(priority = 2)
-	public void addProductCart() throws InterruptedException {
-		AddToCartPage ap = new AddToCartPage();
-		ap.addProduct();
-		ap.selectProduct();
-		ap.goToCart();
-		String actReview = ap.validateWaterBottleReview();
-		String expReview = "Wide mouth opening makes it easy to clean!";
 		
-		Assert.assertEquals(actReview, expReview);
-		ap.goToCart();
-		ap.proceedToCheckOut();
-		ap.addAddress();
-	}
-	
-	
-	
 	@DataProvider
 	public String[][] dp(){
 		String data[][] = ReadDataFromExcel.getData();

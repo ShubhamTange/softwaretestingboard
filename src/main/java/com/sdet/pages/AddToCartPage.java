@@ -1,9 +1,12 @@
 package com.sdet.pages;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -69,7 +72,6 @@ public class AddToCartPage extends TestBase{
 		
 	}
 	
-	
 	public void selectProduct() {
 		driver.findElement(gabrialleTees).click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -115,9 +117,41 @@ public class AddToCartPage extends TestBase{
 	
 	}
 	
-	
-	public void addAddress() {
+	public boolean selectShippingMethod() {
 		
+		By flatRate = By.xpath("//input[@name=\"ko_unique_1\"]");
+		By tableRate = By.xpath("//input[@name=\"ko_unique_2\"]");
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(flatRate));
+		String[] shippingMehothods = {"flatRate", "tableRate" };
+		
+		Random randomMethod = new Random();
+		int randomIndex = randomMethod.nextInt(shippingMehothods.length-1);
+		
+		String methodName = shippingMehothods[randomIndex];
+		System.out.println(methodName);
+		if(methodName.equals("flatRate")) {
+			driver.findElement(flatRate).click();
+		}
+		else if(methodName.equals("tableRate")) {
+			driver.findElement(tableRate).click();
+		}
+		
+		if(methodName.equals("flatRate")) {
+			return driver.findElement(flatRate).isSelected();
+		}
+		else if(methodName.equals("tableRate")) {
+			return driver.findElement(tableRate).isSelected();
+		}
+		
+		return false;
+	}
+	
+	public void addAddress() throws InterruptedException {
+		
+		By newAddressBtn = By.xpath("//button/span[text()=\"New Address\"]");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
 		By fname = By.xpath("//input[@name=\"firstname\"]");
@@ -129,23 +163,70 @@ public class AddToCartPage extends TestBase{
 		By state = By.xpath("//select[@name=\"region_id\"]");
 		By zipCode = By.xpath("//input[@name=\"postcode\"]");
 		By phone = By.xpath("//input[@name=\"telephone\"]");
- 		
+		Thread.sleep(2000);
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(fname));
-		System.out.println("First Name: "+driver.findElement(fname).getText());
-		System.out.println("Last Name: "+driver.findElement(lname).getText());
+		List<WebElement> listAddress = driver.findElements(newAddressBtn);
+		System.out.println("listAddress size"+ listAddress.size() +"\nlist: "+ listAddress);
 		
-		driver.findElement(streetAdd).sendKeys("N-9, 105/3, M2 Road, Aurangabad");
-		driver.findElement(city).sendKeys("Aurangabad");
+		if(listAddress.size()==0) {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(fname));
+			System.out.println("First Name: "+driver.findElement(fname).getText());
+			System.out.println("Last Name: "+driver.findElement(lname).getText());
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(streetAdd));
+			driver.findElement(streetAdd).sendKeys("N-9, 105/3, M2 Road, Aurangabad");
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(city));
+			driver.findElement(city).sendKeys("Aurangabad");
+			
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(country));
+			Select countryList = new Select(driver.findElement(country));
+			countryList.selectByVisibleText("India");
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(state));
+			Select stateList = new Select(driver.findElement(state));
+			stateList.selectByVisibleText("Maharashtra");
 		
-		Select countryList = new Select(driver.findElement(country));
-		countryList.selectByVisibleText("India");
+			wait.until(ExpectedConditions.visibilityOfElementLocated(zipCode));
+			driver.findElement(zipCode).sendKeys("431001");
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(phone));
+			driver.findElement(phone).sendKeys("1234567890");
+		}
 		
-		Select stateList = new Select(driver.findElement(state));
-		stateList.selectByVisibleText("Maharashtra");
+	}
 	
-		driver.findElement(zipCode).sendKeys("431001");
-		driver.findElement(phone).sendKeys("1234567890");
+	public boolean applyDiscount() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		By applyDiscountCode = By.xpath("//span[text()=\"Apply Discount Code\"]");
+		By enterCodeTextBox = By.xpath("//input[@placeholder=\"Enter discount code\"]");
+		By applyDiscount = By.xpath("//span[text()=\"Apply Discount\"]");
+		By errorMessage = By.xpath("//*[@id=\"co-payment-form\"]/fieldset/div[3]/div[2]/div");
+		By nextBtn = By.xpath("//span[text()=\"Next\"]");
+		
+		driver.findElement(nextBtn).click();
+		Thread.sleep(5000);
+		wait.until(ExpectedConditions.elementToBeClickable(applyDiscountCode));
+		driver.findElement(applyDiscountCode).click();
+		driver.findElement(enterCodeTextBox).sendKeys("TEES20");
+		driver.findElement(applyDiscount).click();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).isDisplayed();
+	
+	}
+	
+	public boolean placeOrder() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		By placeOrder = By.xpath("//span[text()=\"Place Order\"]");
+		By thankYouMsg = By.xpath("//span[text()=\"Thank you for your purchase!\"]");		
+		
+		Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrder));
+		driver.findElement(placeOrder).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(thankYouMsg));
+		captureScreenshots("order placed successfully");
+		return driver.findElement(thankYouMsg).isDisplayed();
 		
 	}
 	
