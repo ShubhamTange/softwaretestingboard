@@ -1,49 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-22T11:57:29 IST" name="Default suite" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
+  <suite started-at="2024-07-22T16:57:35 IST" name="Default suite" finished-at="2024-07-22T16:58:48 IST" duration-ms="72853">
     <groups>
     </groups>
-    <test started-at="2024-07-22T11:57:29 IST" name="Default test" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
+    <test started-at="2024-07-22T16:57:35 IST" name="Default test" finished-at="2024-07-22T16:58:48 IST" duration-ms="72853">
       <class name="com.sdet.testcases.AddProductTC">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:57:29 IST" name="beforeClass" finished-at="2024-07-22T11:58:18 IST" duration-ms="48888" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:57:35 IST" name="beforeClass" finished-at="2024-07-22T16:57:47 IST" duration-ms="11837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="validateAddProductCart()[pri:1, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:18 IST" name="validateAddProductCart" finished-at="2024-07-22T11:58:51 IST" duration-ms="32700" status="PASS">
+        <test-method signature="validateAddProductCart()[pri:1, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:57:47 IST" name="validateAddProductCart" finished-at="2024-07-22T16:57:59 IST" duration-ms="12270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAddProductCart -->
-        <test-method signature="validateSelectProductTees()[pri:2, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:51 IST" name="validateSelectProductTees" finished-at="2024-07-22T11:59:03 IST" duration-ms="12296" status="PASS">
+        <test-method signature="validateSelectProductTees()[pri:2, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:57:59 IST" name="validateSelectProductTees" finished-at="2024-07-22T16:58:04 IST" duration-ms="5211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSelectProductTees -->
-        <test-method signature="validateGoToCart()[pri:3, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:03 IST" name="validateGoToCart" finished-at="2024-07-22T11:59:13 IST" duration-ms="9358" status="PASS">
+        <test-method signature="validateGoToCart()[pri:3, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:04 IST" name="validateGoToCart" finished-at="2024-07-22T16:58:14 IST" duration-ms="9552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateGoToCart -->
-        <test-method signature="validateCartReview()[pri:4, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:13 IST" name="validateCartReview" finished-at="2024-07-22T11:59:39 IST" duration-ms="26114" status="PASS">
+        <test-method signature="validateCartReview()[pri:4, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:14 IST" name="validateCartReview" finished-at="2024-07-22T16:58:16 IST" duration-ms="1960" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=126.0.6478.128)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1f5209c993ada011ae70db640bc99d9, clickElement {id=f.50AD52964ED5F2E5C7BA06D04D41D55C.d.8E0B83B72894CA253031479ADC48C65A.e.888}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Shubham\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57426/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d1f5209c993ada011ae70db640bc99d9)] -> xpath: //img[@alt="Affirm Water Bottle "]]
+Session ID: d1f5209c993ada011ae70db640bc99d9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=126.0.6478.128)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1f5209c993ada011ae70db640bc99d9, clickElement {id=f.50AD52964ED5F2E5C7BA06D04D41D55C.d.8E0B83B72894CA253031479ADC48C65A.e.888}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Shubham\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57426/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d1f5209c993ada011ae70db640bc99d9)] -> xpath: //img[@alt="Affirm Water Bottle "]]
+Session ID: d1f5209c993ada011ae70db640bc99d9
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.sdet.pages.AddToCartPage.validateWaterBottleReview(AddToCartPage.java:105)
+at com.sdet.testcases.AddProductTC.validateCartReview(AddProductTC.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartReview -->
-        <test-method signature="validateProceedTOCheckout()[pri:5, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:39 IST" name="validateProceedTOCheckout" finished-at="2024-07-22T12:00:11 IST" duration-ms="32121" status="PASS">
+        <test-method signature="validateProceedTOCheckout()[pri:5, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:16 IST" name="validateProceedTOCheckout" finished-at="2024-07-22T16:58:28 IST" duration-ms="12087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProceedTOCheckout -->
-        <test-method signature="validateShippingMehtod()[pri:6, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:11 IST" name="validateShippingMehtod" finished-at="2024-07-22T12:00:14 IST" duration-ms="3272" status="PASS">
+        <test-method signature="validateShippingMehtod()[pri:6, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:28 IST" name="validateShippingMehtod" finished-at="2024-07-22T16:58:30 IST" duration-ms="1636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateShippingMehtod -->
-        <test-method signature="validateAddAddress()[pri:7, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:14 IST" name="validateAddAddress" finished-at="2024-07-22T12:00:16 IST" duration-ms="2080" status="PASS">
+        <test-method signature="validateAddAddress()[pri:7, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:30 IST" name="validateAddAddress" finished-at="2024-07-22T16:58:32 IST" duration-ms="2033" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAddAddress -->
-        <test-method signature="validateApplyDiscount()[pri:8, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:16 IST" name="validateApplyDiscount" finished-at="2024-07-22T12:00:24 IST" duration-ms="7186" status="PASS">
+        <test-method signature="validateApplyDiscount()[pri:8, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:32 IST" name="validateApplyDiscount" finished-at="2024-07-22T16:58:37 IST" duration-ms="5504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateApplyDiscount -->
-        <test-method signature="validatePlaceOrder()[pri:9, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:24 IST" name="validatePlaceOrder" finished-at="2024-07-22T12:00:42 IST" duration-ms="18690" status="PASS">
+        <test-method signature="validatePlaceOrder()[pri:9, instance:com.sdet.testcases.AddProductTC@22fcf7ab]" started-at="2024-07-22T16:58:37 IST" name="validatePlaceOrder" finished-at="2024-07-22T16:58:48 IST" duration-ms="10689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePlaceOrder -->
