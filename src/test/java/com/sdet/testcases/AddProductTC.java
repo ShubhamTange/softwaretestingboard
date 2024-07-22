@@ -25,7 +25,7 @@ public class AddProductTC extends TestBase {
 			String[][] data = dp();
 			String username = data[0][0];
 			String password = data[0][1];
-			SignInPage.sigin(username, password);
+			SignInPage.signin(username, password);
 		}
 		
 	}
@@ -37,7 +37,7 @@ public class AddProductTC extends TestBase {
 	}
 
 	@Test(priority = 2)
-	public void validateSelectProductTees() {
+	public void validateSelectProductTees() throws InterruptedException {
 		ap.selectProduct();
 	}
 
@@ -95,10 +95,7 @@ public class AddProductTC extends TestBase {
 	
 	@DataProvider
 	public String[][] dp(){
-		String data[][] = ReadDataFromExcel.getData();
+		String data[][] = ReadDataFromExcel.getDataForSignIn();
 		return data;
 	}
-	
-	
-	
 }

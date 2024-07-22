@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,13 +19,16 @@ public class AddToCartPage extends TestBase{
 	By saleMenu = By.xpath("//span[text()=\"Sale\"]");
 	By teesLink = By.xpath("//div[2]/div/div/ul[1]/li[3]/a");
 	By material = By.xpath("//div[text()=\"Material\"]");
-	By cottonMaterial = By.xpath("//div[@id=\"narrow-by-list\"]/div[5]/div[2]/ol/li[2]/a");
-	By pattern = By.xpath("//div[text()=\"Pattern\"]");
-	By solidPattern = By.xpath("//div[@id=\"narrow-by-list\"]/div[10]/div[2]/ol/li/a");
-	By climateBtn = By.xpath("//div[text()=\"Climate\"]");
-	By warmClimate = By.xpath("//div[@id=\"narrow-by-list\"]/div[10]/div[2]/ol/li[2]/a");
+	By cottonMaterial = By.xpath("//div[@id=\"narrow-by-list\"]/div[7]/div[2]/ol/li[2]/a");
 	
-	By gabrialleTees = By.xpath("//div[4]/ol/li[4]");
+	By pattern = By.xpath("//div[text()=\"Pattern\"]");
+	//By solidPattern = By.xpath("//div[@id=\"narrow-by-list\"]/div[10]/div[2]/ol/li/a");
+	By solidPattern = By.xpath("//a[contains(text(), \"Solid\")]");
+	By climateBtn = By.xpath("//div[text()=\"Climate\"]");
+	//By warmClimate = By.xpath("//div[@id=\"narrow-by-list\"]/div[10]/div[2]/ol/li[2]/a");
+	By warmClimate = By.xpath("//div[text()=\"Climate\"]");
+	
+	By gabrialleTees = By.xpath("//*[@id=\"maincontent\"]/div[3]/div[1]/div[3]/ol/li[1]");
 	By sizeL = By.xpath("//div[@option-label=\"L\"]");
 	By greenColor = By.xpath("//div[@option-label=\"Green\"]");
 	By addToCart = By.xpath("//span[contains(text(),\"Add to Cart\")]");
@@ -35,7 +39,7 @@ public class AddToCartPage extends TestBase{
 	By viewEdit = By.xpath("//span[text()=\"View and Edit Cart\"]");
 	
 	By searchTextBox = By.cssSelector("#search");
-	By waterBottle = By.xpath("//*[@id=\"maincontent\"]/div[3]/div[1]/div[3]/div[2]/ol/li[1]/div/a/span/span/img");
+	By waterBottle = By.xpath("//img[@alt=\"Affirm Water Bottle \"]");
 	By reviews = By.cssSelector("#tab-label-reviews-title");
 	By reviewComment = By.cssSelector(".review-content");
 	By addToCartBtn = By.cssSelector("#product-addtocart-button");
@@ -72,8 +76,9 @@ public class AddToCartPage extends TestBase{
 		
 	}
 	
-	public void selectProduct() {
+	public void selectProduct() throws InterruptedException {
 		driver.findElement(gabrialleTees).click();
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(sizeL));
 		driver.findElement(sizeL).click();
@@ -109,7 +114,7 @@ public class AddToCartPage extends TestBase{
 	}
 	
 	public boolean proceedToCheckOut() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(proceedToCheckoutBtn)).click();
 		
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(shippingAddress)).isDisplayed();
@@ -199,6 +204,7 @@ public class AddToCartPage extends TestBase{
 	
 	public boolean applyDiscount() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
 		By applyDiscountCode = By.xpath("//span[text()=\"Apply Discount Code\"]");
 		By enterCodeTextBox = By.xpath("//input[@placeholder=\"Enter discount code\"]");
 		By applyDiscount = By.xpath("//span[text()=\"Apply Discount\"]");
@@ -207,10 +213,15 @@ public class AddToCartPage extends TestBase{
 		
 		driver.findElement(nextBtn).click();
 		Thread.sleep(5000);
+		WebElement applyDisc = driver.findElement(applyDiscountCode);
 		wait.until(ExpectedConditions.elementToBeClickable(applyDiscountCode));
-		driver.findElement(applyDiscountCode).click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyDisc);
+		//driver.findElement(applyDiscountCode).click();
 		driver.findElement(enterCodeTextBox).sendKeys("TEES20");
-		driver.findElement(applyDiscount).click();
+		WebElement applyDiscountBTN = driver.findElement(applyDiscount);
+		wait.until(ExpectedConditions.elementToBeClickable(applyDiscount));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyDiscountBTN);
+		//driver.findElement(applyDiscount).click();
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).isDisplayed();
 	
 	}

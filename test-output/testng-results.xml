@@ -1,75 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-25T16:09:07 IST" name="Default suite" finished-at="2024-06-25T16:10:51 IST" duration-ms="103853">
+  <suite started-at="2024-07-22T11:57:29 IST" name="Default suite" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
     <groups>
     </groups>
-    <test started-at="2024-06-25T16:09:07 IST" name="Default test" finished-at="2024-06-25T16:10:51 IST" duration-ms="103853">
-      <class name="com.sdet.testcases.SigninTC">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.SigninTC@548d708a]" started-at="2024-06-25T16:09:07 IST" name="beforeClass" finished-at="2024-06-25T16:10:02 IST" duration-ms="54696" status="PASS">
+    <test started-at="2024-07-22T11:57:29 IST" name="Default test" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
+      <class name="com.sdet.testcases.AddProductTC">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:57:29 IST" name="beforeClass" finished-at="2024-07-22T11:58:18 IST" duration-ms="48888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="signInTC(java.lang.String,java.lang.String)[pri:1, instance:com.sdet.testcases.SigninTC@548d708a]" started-at="2024-06-25T16:10:03 IST" name="signInTC" data-provider="dp" finished-at="2024-06-25T16:10:51 IST" duration-ms="48185" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shubhamtange999@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Shubham@123]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at com.sdet.testcases.SigninTC.signInTC(SigninTC.java:29)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="validateAddProductCart()[pri:1, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:18 IST" name="validateAddProductCart" finished-at="2024-07-22T11:58:51 IST" duration-ms="32700" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTC -->
-      </class> <!-- com.sdet.testcases.SigninTC -->
+        </test-method> <!-- validateAddProductCart -->
+        <test-method signature="validateSelectProductTees()[pri:2, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:51 IST" name="validateSelectProductTees" finished-at="2024-07-22T11:59:03 IST" duration-ms="12296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSelectProductTees -->
+        <test-method signature="validateGoToCart()[pri:3, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:03 IST" name="validateGoToCart" finished-at="2024-07-22T11:59:13 IST" duration-ms="9358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateGoToCart -->
+        <test-method signature="validateCartReview()[pri:4, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:13 IST" name="validateCartReview" finished-at="2024-07-22T11:59:39 IST" duration-ms="26114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCartReview -->
+        <test-method signature="validateProceedTOCheckout()[pri:5, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:39 IST" name="validateProceedTOCheckout" finished-at="2024-07-22T12:00:11 IST" duration-ms="32121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProceedTOCheckout -->
+        <test-method signature="validateShippingMehtod()[pri:6, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:11 IST" name="validateShippingMehtod" finished-at="2024-07-22T12:00:14 IST" duration-ms="3272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateShippingMehtod -->
+        <test-method signature="validateAddAddress()[pri:7, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:14 IST" name="validateAddAddress" finished-at="2024-07-22T12:00:16 IST" duration-ms="2080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAddAddress -->
+        <test-method signature="validateApplyDiscount()[pri:8, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:16 IST" name="validateApplyDiscount" finished-at="2024-07-22T12:00:24 IST" duration-ms="7186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateApplyDiscount -->
+        <test-method signature="validatePlaceOrder()[pri:9, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:24 IST" name="validatePlaceOrder" finished-at="2024-07-22T12:00:42 IST" duration-ms="18690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePlaceOrder -->
+      </class> <!-- com.sdet.testcases.AddProductTC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

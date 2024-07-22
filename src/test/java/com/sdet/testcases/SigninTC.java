@@ -26,13 +26,13 @@ public class SigninTC extends TestBase{
 	
 	@Test(dataProvider = "dp", priority = 1)
 	public void signInTC(String username, String password) {
-		Assert.assertTrue(SignInPage.sigin(username, password));
+		Assert.assertTrue(SignInPage.signin(username, password));
 	}
 	
 		
 	@DataProvider
 	public String[][] dp(){
-		String data[][] = ReadDataFromExcel.getData();
+		String data[][] = ReadDataFromExcel.getDataForSignIn();
 		return data;
 	}
 	

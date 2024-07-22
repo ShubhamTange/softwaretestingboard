@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sdet.testcases.SigninTC">
+      <class name="com.sdet.testcases.AddProductTC">
         <methods>
+          <include name="validateApplyDiscount"/>
+          <include name="validateShippingMehtod"/>
+          <include name="validateAddAddress"/>
+          <include name="validatePlaceOrder"/>
           <include name="beforeClass"/>
-          <include name="signInTC" invocation-numbers="0"/>
+          <include name="validateProceedTOCheckout"/>
         </methods>
-      </class> <!-- com.sdet.testcases.SigninTC -->
+      </class> <!-- com.sdet.testcases.AddProductTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
