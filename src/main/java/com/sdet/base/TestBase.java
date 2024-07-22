@@ -59,7 +59,7 @@ public class TestBase {
 
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
 		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-		String scnShotFileName = "src/test/resources/output/screenshot_" + timeStamp + ".png";
+		String scnShotFileName = "src/test/resources/output/screenshot_"+scrName+"_" + timeStamp + ".png";
 		File DestFile = new File(scnShotFileName);
 		try {
 			FileUtils.copyFile(SrcFile, DestFile);

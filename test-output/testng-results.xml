@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-17T12:09:35 IST" name="Default suite" finished-at="2024-04-17T12:11:29 IST" duration-ms="113927">
+  <suite started-at="2024-07-22T11:57:29 IST" name="Default suite" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
     <groups>
     </groups>
-    <test started-at="2024-04-17T12:09:35 IST" name="Default test" finished-at="2024-04-17T12:11:29 IST" duration-ms="113927">
-      <class name="com.sdet.testcases.SigninTC">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.SigninTC@4b013c76]" started-at="2024-04-17T12:09:35 IST" name="beforeClass" finished-at="2024-04-17T12:09:56 IST" duration-ms="20567" status="PASS">
+    <test started-at="2024-07-22T11:57:29 IST" name="Default test" finished-at="2024-07-22T12:00:42 IST" duration-ms="192844">
+      <class name="com.sdet.testcases.AddProductTC">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:57:29 IST" name="beforeClass" finished-at="2024-07-22T11:58:18 IST" duration-ms="48888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="signInTC(java.lang.String,java.lang.String)[pri:1, instance:com.sdet.testcases.SigninTC@4b013c76]" started-at="2024-04-17T12:09:57 IST" name="signInTC" data-provider="dp" finished-at="2024-04-17T12:10:39 IST" duration-ms="42084" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shubhamtange999@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Shubham@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="validateAddProductCart()[pri:1, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:18 IST" name="validateAddProductCart" finished-at="2024-07-22T11:58:51 IST" duration-ms="32700" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTC -->
-        <test-method signature="addProductCart()[pri:2, instance:com.sdet.testcases.SigninTC@4b013c76]" started-at="2024-04-17T12:10:39 IST" name="addProductCart" finished-at="2024-04-17T12:11:29 IST" duration-ms="50290" status="PASS">
+        </test-method> <!-- validateAddProductCart -->
+        <test-method signature="validateSelectProductTees()[pri:2, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:58:51 IST" name="validateSelectProductTees" finished-at="2024-07-22T11:59:03 IST" duration-ms="12296" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductCart -->
-      </class> <!-- com.sdet.testcases.SigninTC -->
+        </test-method> <!-- validateSelectProductTees -->
+        <test-method signature="validateGoToCart()[pri:3, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:03 IST" name="validateGoToCart" finished-at="2024-07-22T11:59:13 IST" duration-ms="9358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateGoToCart -->
+        <test-method signature="validateCartReview()[pri:4, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:13 IST" name="validateCartReview" finished-at="2024-07-22T11:59:39 IST" duration-ms="26114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCartReview -->
+        <test-method signature="validateProceedTOCheckout()[pri:5, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T11:59:39 IST" name="validateProceedTOCheckout" finished-at="2024-07-22T12:00:11 IST" duration-ms="32121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProceedTOCheckout -->
+        <test-method signature="validateShippingMehtod()[pri:6, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:11 IST" name="validateShippingMehtod" finished-at="2024-07-22T12:00:14 IST" duration-ms="3272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateShippingMehtod -->
+        <test-method signature="validateAddAddress()[pri:7, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:14 IST" name="validateAddAddress" finished-at="2024-07-22T12:00:16 IST" duration-ms="2080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAddAddress -->
+        <test-method signature="validateApplyDiscount()[pri:8, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:16 IST" name="validateApplyDiscount" finished-at="2024-07-22T12:00:24 IST" duration-ms="7186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateApplyDiscount -->
+        <test-method signature="validatePlaceOrder()[pri:9, instance:com.sdet.testcases.AddProductTC@402c4085]" started-at="2024-07-22T12:00:24 IST" name="validatePlaceOrder" finished-at="2024-07-22T12:00:42 IST" duration-ms="18690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePlaceOrder -->
+      </class> <!-- com.sdet.testcases.AddProductTC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
