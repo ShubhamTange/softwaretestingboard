@@ -1,0 +1,8 @@
+com\sdet\pages\SignInPage.class
+com\sdet\utilities\ReadDataFromExcel.class
+com\sdet\pages\CreateAccountPage.class
+com\sdet\pages\AddToCartPage.class
+com\sdet\pages\MyAccountPage.class
+com\sdet\pages\myOrder.class
+com\sdet\base\TestBase.class
+com\sdet\pages\SignOutPage.class
