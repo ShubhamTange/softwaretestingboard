@@ -5,9 +5,8 @@
     <classes>
       <class name="com.sdet.testcases.AddProductTC">
         <methods>
-          <include name="validateApplyDiscount"/>
+          <include name="validateCartReview"/>
           <include name="beforeClass"/>
-          <include name="validateProceedTOCheckout"/>
         </methods>
       </class> <!-- com.sdet.testcases.AddProductTC -->
     </classes>
